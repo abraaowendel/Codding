@@ -13,9 +13,9 @@
 }
 
 /*  */
-body,section{
+html,body,section, form{
     overflow-x: hidden;
-}       
+}
 html{
     scroll-behavior: smooth;
 }
@@ -23,18 +23,27 @@ h1{
     font-size: 3em;
     color: var(--main-color);
 }
+h2{
+    padding: 10px 0 0px 0;
+}
+h3{
+    font-size: 1.5em;
+    font-weight: normal;
+}
 h4{
     font-size: 1.3em;
     margin-top: 30px;
 }
-
+p{
+    font-size: 14px;
+}
 img{
     max-width: 100%;
 }
 
 .btn{
     padding:10px 40px;
-    background-color: #D6000D;
+    background-color: var(--main-color);
     border: 1px solid transparent;
     border-radius: 10px;
     color: var(--second-text-color) !important;
@@ -44,13 +53,18 @@ img{
 .btn:hover{
     background-color: var(--bg-color);
     color: var(--main-color) !important;
-    border-color: #D6000D;
+    border-color: var(--main-color);
     transition: 0.5s ease-in;
 }
 .main-text .btn{
     display: inline-block;
     margin-top: 20px;
     padding: 15px 45px;
+}
+
+#header,#social-media, section{
+    max-width: 1200px;
+    margin: auto;
 }
 
 .grid-layout{
@@ -63,19 +77,21 @@ img{
 /*  */
 
 
-header,footer, #header{
+header,footer{
     padding: 10px 40px;
     overflow-x: hidden  ;
 }
-header,section{
-    background-color: var(--bg-color);
+footer{
+    background-color: #030303;
+    color: var(--second-text-color);
 }
 
-#main, #services{
+section,#social-media{
     padding: 60px 115px;
 }
 /* HEADER */
 #header{
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +111,7 @@ header,section{
     transition: 0.4s ease-in;
 }
 .nav-list li a:hover{
-    color: #D6000D;
+    color: var(--main-color);
     transition: 0.3s ease-in-out;
 }
 .menu{
@@ -134,8 +150,7 @@ header,section{
 }
 .services-item h3{
     margin: 0 0 0 20px;
-    font-size: 1.5em;
-    font-weight: normal;
+  
 }
 
 input{
@@ -145,7 +160,7 @@ input{
     border-radius: 10px;
     font-size: 1.1em;
     background-color: #cccccc;
-    border: 1px solid #fff;
+    border: 1px solid var(--second-text-color);
     outline: none;
     min-width: 260px;   
 }
@@ -153,22 +168,67 @@ input[type='button']{
     background-color: var(--main-color);
     color: var(--second-text-color);
     cursor: pointer;
-text-indent: 0;
+    text-indent: 0;
 }
 input:hover{
     opacity: 0.9;
 }
 /*  */
+
+.report-item{
+    display: flex;
+    background-color: #cccccc;
+    padding: 30px 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.report-text{
+    margin: 0 20px;
+}
+.circle{
+    display: block;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+/*  */
+#social-media{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 180px;
+}
+.social h2{
+    margin-bottom: 15px;
+}
+.social a{
+    color: var(--second-text-color);
+    margin-bottom: 10px ;
+    font-size: 1em;
+    margin-right: 10px;
+}
+.social p{
+    font-size: 1em;
+}
+
+/*  */
+
 @media (max-width: 992px){
-    #main, #services{
-        padding: 50px 150px;
+    #header{
+        padding: 0;
     }
     .menu{
         display: block;
     }
     .nav-list{
         position: fixed;
-        top: 90px;
+        top: 71px;
         left: 100%;
         display: flex;
         justify-content: center;
@@ -226,76 +286,93 @@ input:hover{
     }
      h4{
          margin: 40px 0 10px 0;
+         text-align: center;
      }
-     form,h4{
-        text-align: center;
-    }
      input{
          display: block;
-         margin: 10px auto;
+         margin: 6px auto;
+     }
+     #social-media{
+         justify-content: center;
+         align-items: center;
+     }
+     .social{
+         width: 100%;
+         max-inline-size: none;
+         margin: 10px ;
+     }
+     .codding{
+         text-align: center;
+         margin: 30px auto;
+     }
+     .codding h2{
+         font-size: 2em;
+     }
+     .codding p {
+         font-size: 1.25em;
      }
 }
-@media (max-width: 625px){
-    #main, #services{
-        padding: 50px;
+@media (max-width: 768px){
+    section, #social-media{
+        padding: 80px 40px;
     }
-    #header{
-        padding: 10px 0;
+    .services-photo{
+        max-width: 450px;
     }
-    
     h1{
         font-size: 3em;
     }
-    h4{
-        font-size: 1.3em;
-    }
-    .main-text span{
-        font-size: 1.3em;
-    }
-  
-   
 }
-@media (max-width: 444px){
+@media (max-width: 460px){
     header,footer{
         padding: 10px 20px;
     }
-    #main, #services{
-        padding: 50px;
+    section, #social-media{
+        padding: 50px  30px;
     }
     h1{
-        font-size: 1.8em;
+        font-size: 2.125em;
     }
-    .grid-layout{
-        gap: 10px;
+    h2{
+        font-size: 1.3em;
+    }
+    h3{
+        font-size: 1.25em;
+    }
+    h4{
+        font-size: 1em;
+    }
+    p{
+        font-size: 0.8125em;
     }
     .main-text span{
         font-size: 0.875em;
     }
     .main-text .btn{
-        display: block;
+        font-size: 1.0625em;
         font-weight: normal;
-        font-size: 1em;
-        padding: 15px ;
-    }
-    .services-item{
-        width: 100%;
     }
     .services-item img{
         height: 30px;
     }
     .services-item h3{
-        font-size: 1em;
         margin-left: 10px;
     }
     .services-photo{
-        max-width: 350px;
+        max-width: 320px;
     }
-
     input{
-        width: 100%;
-        min-width: 0;
-        font-size: 1em;
+        font-size: 0.875em;
     }
-   
- 
+    .report-item{
+        padding: 20px 10px;
+    }
+    .report-text{
+        margin: 0 15px;
+    }
+    
+    .circle{
+        width: 50px;
+        height: 50px;
+    }
 }
