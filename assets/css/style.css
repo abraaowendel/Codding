@@ -74,15 +74,13 @@ img{
     align-items: center;
     gap: 33px;
 }
-/*  */
-
-
+/*  */  
 header,footer{
     padding: 10px 40px;
     overflow-x: hidden  ;
 }
 footer{
-    background-color: #030303;
+    background-color: var(--text-color);
     color: var(--second-text-color);
 }
 
@@ -216,7 +214,6 @@ input:hover{
 .social p{
     font-size: 1em;
 }
-
 /*  */
 
 @media (max-width: 992px){
