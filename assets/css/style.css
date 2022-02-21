@@ -76,7 +76,7 @@ img{
 }
 /*  */  
 header,footer{
-    padding: 10px 40px;
+    padding: 0px 40px;
     overflow-x: hidden  ;
 }
 footer{
@@ -299,6 +299,9 @@ input:hover{
          margin: 10px ;
      }
      .codding{
+         display: flex;
+         align-items: center;
+         justify-content: center;
          text-align: center;
          margin: 30px auto;
      }
